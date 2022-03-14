@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #000 !important;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light{
+    background-color: black !important;
+    height: 80px;
+    padding: 0.5em 0;
+}
+
+a.navbar-brand{
+    color: white !important;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    text-shadow: 0px 0px 10px orange;
+
+}
+
+span.navbar-toggler-icon{
+    background-color: orange;
+    font-size: 1.5em;
+}
+
+a.nav-link{
+    color: orange !important;
+}
+a.nav-link:hover{
+    color: rgb(138, 93, 11) !important;
+    transition: 0.5s;
+}
+
+#body{
+    width: 60%;
+    margin: 2em auto;
+  
+}
+p.invalid-feedback strong{
+    color: rgb(209, 79, 79) !important;
+}
+
+.items-center{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form,.profile-content{
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgb(205, 230, 251);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+form h4, h4{
+    color: #000 !important;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ol.breadcrumb{
+    background-color: rgb(181, 209, 233);
+    padding: 1em;
+    border-radius: 7px;
+}
+
+span.asteriskField{
+    display: none;
+}
+
+label,input{
+    margin-bottom: 0.5em;
+}
+
+button.btn{
+    background: black;
+    border: 1px solid black;
+    margin-top: 0.5em;
+    color: #fff !important;
+}
+button.btn:hover{
+    background-color: #ffa500;
+    transition: 0.5s;
+}
+
+.center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-div hr{
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    width: 2em;
+    background-color: #ffa500;
+}
+
+img.profile-picture{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+img.profile-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display:block;
+    text-align:center;
+}
+
+.profile{
+    display: flex;
+    
+}
+
+.profile .columns{
+    flex: 45%;
+    margin-right: 10px;
+}
+
+
+p.profile-data{
+    margin-top:2em;
+}
+
+
+p.profile-data strong{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+div.posts{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgb(205, 230, 251);
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+}
+
+.post-title{
+    flex:10%;
+    margin-right: 0.5em !important;
+}
+
+
+
+.content{
+    margin-bottom: 1em;
+}
+
+.content span a,.content span{
+    margin-right: 0.5em;
+    color: rgb(180, 174, 174) !important;
+}
+
+button.btn.btn-success{
+    background-color: greenyellow !important;
+    margin-left: 1em;
+}
+button.btn.btn-success a{
+    text-decoration: none;
+}
+
+small#hint_id_new_password1.form-text.text-muted{
+    display: none !important;
+}
+
+@media only screen and (max-width : 992px){
+    #body{
+        width: 90%;
+
+    }
+
+    .profile{
+        flex-direction: column;
+    }
+
+    .post-title{
+        flex:20%;
+        padding-right:0.5em;
+    }
+    
+
+}
+
+

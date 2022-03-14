@@ -1,0 +1,33 @@
+{% extends 'blogapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Delete</title>
+{% endblock title %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">Delete</li>
+    </ol>
+</nav>
+
+<div class="items-center">
+    
+    <form method="post">
+        {% csrf_token %}
+        <h6>Are you sure you want to delete {{object.title}}</h6>
+
+        <div class="center-div">
+            <hr>
+        </div>
+     
+        {{form|crispy}}
+
+        <button class="btn" type="submit">Delete</button> <button class="btn btn-success"><a href="{% url 'blog:detail' object.pk%}">Cancel</a></button>
+    </form>
+</div>
+
+{% endblock content %}

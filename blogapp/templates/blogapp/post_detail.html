@@ -1,0 +1,40 @@
+{% extends "blogapp/base.html" %}
+{% block title %}
+         <title>Home</title>
+{% endblock title %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">{{post.title}}</li>
+    </ol>
+</nav>
+{% if post %}
+
+
+<div class="posts">
+    <div class="post-title">
+        <img class="profile-picture" src="{{post.author.profile.image.url}}" alt="">
+    </div>
+    <div class="post-content">
+        <div class="content">
+            <span>@{{post.author.username}}</span>
+            <small>{{post.date_created|date}}</small>
+        </div> 
+        <h5>{{post.title}}</h5>
+        <p>{{post.content}}</p>
+        <div class="post-buttons">
+            {% if request.user == post.author %}
+            <a href="{% url 'blog:edit' post.pk %}" class="btn btn-sm btn-success text-light mr-10">Edit</a> &nbsp; &nbsp;
+            <a href="{% url 'blog:delete' post.pk %}" class="btn btn-sm btn-danger text-light mr-10">Delete</a> &nbsp; &nbsp;
+             {% endif %}
+        </div> 
+    </div>
+    
+</div>
+
+
+{% endif %}
+
+{% endblock content %}

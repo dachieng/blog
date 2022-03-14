@@ -1,0 +1,33 @@
+{% extends 'blogapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Register</title>
+{% endblock title %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">Register</li>
+    </ol>
+  </nav>
+
+<div class="items-center">
+    
+    <form method="post">
+        <h4>Register</h4>
+
+        <div class="center-div">
+            <hr>
+        </div>
+
+        {% csrf_token %}
+        {{form|crispy}}
+
+        <button class="btn">Sign up</button>
+    </form>
+</div>
+
+{% endblock content %}

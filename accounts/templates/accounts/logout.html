@@ -1,0 +1,25 @@
+{% extends 'blogapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Logout</title>
+{% endblock title %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">Logout</li>
+    </ol>
+</nav>
+
+<div class="items-center">
+    
+    <form method="post">
+        <p>You have been successfuly logged out of the system</p>
+        <small>Would you like to login again? &nbsp;  <a style="color: blue;" href="{% url 'accounts:login' %}">login</a></small>
+    </form>
+</div>
+
+{% endblock content %}

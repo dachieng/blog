@@ -1,0 +1,60 @@
+{% extends 'blogapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Update</title>
+{% endblock title %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">My Profile</li>
+      
+    </ol>
+  </nav>
+
+<div class="profile">
+
+   <div class="columns profile-content">
+    <h4>My Profile</h4>
+
+    <div class="center-div">
+        <hr>
+    </div>
+    <img class="profile-image" src="{{user.profile.image.url}}" alt="" srcset="">
+    <p class="profile-data">
+      <strong>Username: </strong>
+      <span>{{request.user.username}}</span>
+    </p>
+    <p class="profile-data">
+      <strong>Email: </strong>
+      <span>{{request.user.email}}</span>
+    </p>
+    <p class="profile-data">
+      <strong>Description: </strong>
+      <span>{{request.user.profile.description}}</span>
+    </p>
+   </div>
+    
+   <div class="columns">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h4>Update Profile</h4>
+
+      <div class="center-div">
+          <hr>
+      </div>
+
+      {{u_form|crispy}}
+      {{p_form|crispy}}
+
+      <button class="btn" type="submit">Update</button>
+  </form>
+   </div>
+</div>
+
+
+
+{% endblock content %}

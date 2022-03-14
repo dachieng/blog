@@ -1,0 +1,33 @@
+{% extends 'blogapp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">Login</li>
+    </ol>
+</nav>
+
+<div class="items-center">
+    
+    <form method="post">
+        {% csrf_token %}
+        <h4>Login</h4>
+
+        <div class="center-div">
+            <hr>
+        </div>
+     
+        {{form|crispy}}
+
+        <button style="margin-right: 1em;" class="btn">Login</button> <small><a href="{% url 'password-reset' %}">Forgot Password?</a></small>
+    </form>
+</div>
+
+{% endblock content %}
