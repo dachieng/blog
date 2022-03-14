@@ -7,7 +7,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{% url 'blog:home' %}">Home</a></li>
-      <li class="breadcrumb-item"><a href="{% url 'blog:create' %}">New Post</a></li>
+     {% if user.is_authenticated %} <li class="breadcrumb-item"><a href="{% url 'blog:create' %}">New Post</a></li> {% endif %}
 
     </ol>
 </nav>
