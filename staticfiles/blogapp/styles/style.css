@@ -119,6 +119,8 @@ img.profile-image{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    display:block;
+    text-align:center;
 }
 
 .profile{
@@ -134,7 +136,6 @@ img.profile-image{
 
 p.profile-data{
     margin-top:2em;
-    padding-top:2em;
 }
 
 
@@ -144,10 +145,46 @@ p.profile-data strong{
     font-weight: normal;
 }
 
+div.posts{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: rgb(205, 230, 251);
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+}
+
+.post-title{
+    flex:10%;
+    margin-right: 0.5em !important;
+}
+
+
+
+.content{
+    margin-bottom: 1em;
+}
+
+.content span a,.content span{
+    margin-right: 0.5em;
+    color: rgb(180, 174, 174) !important;
+}
+
+button.btn.btn-success{
+    background-color: greenyellow !important;
+    margin-left: 1em;
+}
+button.btn.btn-success a{
+    text-decoration: none;
+}
+
+small#hint_id_new_password1.form-text.text-muted{
+    display: none !important;
+}
 
 @media only screen and (max-width : 992px){
     #body{
-        width: 80%;
+        width: 90%;
 
     }
 
@@ -155,17 +192,12 @@ p.profile-data strong{
         flex-direction: column;
     }
 
+    .post-title{
+        flex:20%;
+        padding-right:0.5em;
+    }
+    
+
 }
 
 
-@media only screen and (max-width : 500px){
-    #body{
-        width: 80%;
-
-    }
-
-    .profile{
-        flex-direction: column;
-    }
-
-}
